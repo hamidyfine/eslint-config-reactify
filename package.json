@@ -1,0 +1,59 @@
+{
+    "name": "eslint-config-reactify",
+    "description": "ESLint configuration for React projects",
+    "version": "1.0.0",
+    "type": "module",
+    "main": "index.js",
+    "exports": {
+        ".": {
+            "import": "./index.js",
+            "require": "./legacy.js"
+        }
+    },
+    "keywords": [
+        "eslint",
+        "eslintconfig"
+    ],
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": {
+        "name": "Hamid Yaftian",
+        "email": "hamid.yaftian@gmail.com",
+        "url": "https://github.com/hamidyfine"
+    },
+    "repository": {
+        "url": "https://github.com/hamidyfine/eslint-config-reactify"
+    },
+    "license": "MIT",
+    "peerDependencies": {
+        "eslint": "^9.32.0"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.32.0",
+        "@stylistic/eslint-plugin": "^5.2.2",
+        "@stylistic/eslint-plugin-migrate": "^4.4.1",
+        "@tanstack/eslint-plugin-query": "^5.81.2",
+        "@tanstack/eslint-plugin-router": "^1.129.7",
+        "@typescript-eslint/eslint-plugin": "^8.38.0",
+        "@typescript-eslint/parser": "^8.38.0",
+        "eslint": "^9.32.0",
+        "eslint-import-resolver-typescript": "^4.4.4",
+        "eslint-plugin-import": "^2.32.0",
+        "eslint-plugin-import-newlines": "^1.4.0",
+        "eslint-plugin-jest": "^29.0.1",
+        "eslint-plugin-jsdoc": "^51.4.1",
+        "eslint-plugin-json": "^4.0.1",
+        "eslint-plugin-no-secrets": "^2.2.1",
+        "eslint-plugin-perfectionist": "^4.15.0",
+        "eslint-plugin-react": "^7.37.5",
+        "eslint-plugin-react-hooks": "^5.2.0",
+        "eslint-plugin-react-refresh": "^0.4.20",
+        "eslint-plugin-simple-import-sort": "^12.1.1",
+        "eslint-plugin-sonarjs": "^3.0.4",
+        "eslint-plugin-tsdoc": "^0.4.0",
+        "globals": "^16.3.0",
+        "typescript": "^5.8.3",
+        "typescript-eslint": "^8.38.0"
+    }
+}

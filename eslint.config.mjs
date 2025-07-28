@@ -1,4 +1,4 @@
-import config from './index.js';
+import config from './lib/index.js';
 
 // eslint-disable-next-line tsdoc/syntax
 /** @type {import("eslint").Linter.Config} */

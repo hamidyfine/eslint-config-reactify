@@ -1,7 +1,7 @@
 {
     "name": "eslint-config-reactify",
     "description": "ESLint configuration for React projects",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "type": "module",
     "main": "index.js",
     "exports": {
@@ -29,7 +29,7 @@
     "peerDependencies": {
         "eslint": "^9.32.0"
     },
-    "devDependencies": {
+    "dependencies": {
         "@eslint/js": "^9.32.0",
         "@stylistic/eslint-plugin": "^5.2.2",
         "@stylistic/eslint-plugin-migrate": "^4.4.1",

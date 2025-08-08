@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.2]
+
+### Fixed
+
+- Disable duplicate TypeScript rules:
+  - `typescript-eslint/no-non-null-assertion`: Changed from 'error' to 'off'
+  - `typescript-eslint/no-unnecessary-condition`: Changed from 'error' to 'off'
+  - `typescript-eslint/prefer-nullish-coalescing`: Changed from 'error' to 'off'
+
 ## [1.1.1]
 
 ### Added

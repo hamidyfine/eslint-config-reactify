@@ -110,18 +110,31 @@ dist, build, coverage, node_modules, public, out, storybook-static, .next, .turb
 
 ### ⚙️ TypeScript — `@typescript-eslint/eslint-plugin`
 
+- `@typescript-eslint/consistent-type-imports`: Enforces consistent type import style with inline type imports preference
+- `@typescript-eslint/no-empty-object-type`: off
+- `@typescript-eslint/no-explicit-any`: off (explicit any allowed)
 - `@typescript-eslint/no-non-null-assertion`: off (relaxed)
-- `@typescript-eslint/sort-type-constituents`: off (custom sorting used)
+- `@typescript-eslint/no-unnecessary-condition`: off
 - `@typescript-eslint/prefer-nullish-coalescing`: off
+- `@typescript-eslint/sort-type-constituents`: off (custom sorting used)
 - and more...
 
 ### 📦 Import Handling — `eslint-plugin-import`, `simple-import-sort`, `import-newlines`
 
+- `import/consistent-type-specifier-style`: off
+- `import/exports-last`: off
+- `import/extensions`: off
+- `import/group-exports`: off
+- `import/namespace`: enforce import syntax (with computed allowed)
+- `import/newline-after-import`: enforce newline after import
+- `import/no-default-export`: off
 - `import/no-duplicates`: disallow duplicate imports
-- `import/namespace`: enforce import syntax
-- `import/consistent-type-specifier-style`: prefer top-level `type` imports
-- `simple-import-sort/imports`: sorted imports
-- `import-newlines/enforce`: enforce newlines in import lists
+- `import/no-extraneous-dependencies`: off
+- `import/no-named-as-default`: off
+- `import/no-unresolved`: off
+- `import-newlines/enforce`: enforce newlines in import lists (30 items, max-len 240)
+- `simple-import-sort/exports`: warn
+- `simple-import-sort/imports`: warn
 
 ### 📚 Documentation — `eslint-plugin-jsdoc`, `eslint-plugin-tsdoc`
 
@@ -133,25 +146,25 @@ dist, build, coverage, node_modules, public, out, storybook-static, .next, .turb
 
 - `sonarjs/...`: complexity, duplication, etc.
 - `no-secrets/no-secrets`: detect secrets in code
-- `perfectionist/sort-union-types`: sorted union types
-- `perfectionist/sort-imports`: disabled (we use `simple-import-sort`)
-- `perfectionist/sort-jsx-props`: disabled (covered by `react/jsx-sort-props`)
+- `perfectionist/sort-exports`: sorted exports with comment partitioning
+- `perfectionist/sort-imports`: off (we use `simple-import-sort`)
+- `perfectionist/sort-jsx-props`: off (covered by `react/jsx-sort-props`)
+- `perfectionist/sort-modules`: sorted modules with comment partitioning
+- `perfectionist/sort-union-types`: sorted union types (custom groups)
 
-### 🧪 Test Files — `eslint-plugin-jest`
+### 🧪 Test Files — `eslint-plugin-jest` & `eslint-plugin-jest-dom`
 
-Applied to `test/--` and includes:
+Applied to `test/**`, `**/*.test.{js,jsx,ts,tsx}`, and `**/*.spec.{js,jsx,ts,tsx}` and includes:
 
-- `jest/valid-expect`
-- `jest/no-disabled-tests`
-- `jest/no-identical-title`
-- `jest/no-conditional-expect`
+- `jest-dom/...`: recommended DOM testing rules
+- `jest/...`: recommended Jest rules
 
 ### 🔧 Misc
 
-- `-.json`: enabled with `eslint-plugin-json`
-- `src/pages/-.tsx`: relaxed React rules for Next.js-style routes (i.e, Tanstack Router)
-- `src/types` & `src/stores`: relaxed export rules
-- `*.config.js`, `*.setup.ts`: relaxed for CommonJS usage
+- `*.json`: enabled with `eslint-plugin-json`
+- `src/pages/**/*.tsx`: relaxed React rules for Next.js-style routes (i.e, Tanstack Router)
+- `src/types/*.ts` & `src/stores/*.ts`: relaxed export rules
+- `.cz-config.cjs`, `jest.setup.ts`, `postcss.config.js`: relaxed for CommonJS usage
 
 ---
 

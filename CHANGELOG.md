@@ -2,6 +2,47 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.4]
+
+### Changed
+
+- Updated TypeScript rules:
+  - `@typescript-eslint/consistent-type-imports`: Enforces consistent type import style with inline type imports preference
+  - `@typescript-eslint/no-empty-object-type`: Disabled
+  - `@typescript-eslint/no-explicit-any`: Disabled
+  - `@typescript-eslint/no-non-null-assertion`: Disabled
+  - `@typescript-eslint/no-unnecessary-condition`: Disabled
+  - `@typescript-eslint/prefer-nullish-coalescing`: Disabled
+  - `@typescript-eslint/sort-type-constituents`: Disabled
+- Updated import rules:
+  - `import/consistent-type-specifier-style`: Disabled
+  - `import/exports-last`: Disabled
+  - `import/extensions`: Disabled
+  - `import/group-exports`: Disabled
+  - `import/namespace`: Enforced with computed allowed
+  - `import/newline-after-import`: Enforced
+  - `import/no-default-export`: Disabled
+  - `import/no-duplicates`: Enforced
+  - `import/no-extraneous-dependencies`: Disabled
+  - `import/no-named-as-default`: Disabled
+  - `import/no-unresolved`: Disabled
+  - `import-newlines/enforce`: Enforced with 30 items, max-len 240
+  - `simple-import-sort/exports`: Warn
+  - `simple-import-sort/imports`: Warn
+- Updated code quality rules:
+  - `perfectionist/sort-exports`: Enforced with comment partitioning
+  - `perfectionist/sort-imports`: Disabled
+  - `perfectionist/sort-jsx-props`: Disabled
+  - `perfectionist/sort-modules`: Enforced with comment partitioning
+  - `perfectionist/sort-union-types`: Enforced with custom groups
+- Updated test file patterns and rules:
+  - Applied `jest-dom` and `jest` recommended rules to `test/**`, `**/*.test.{js,jsx,ts,tsx}`, and `**/*.spec.{js,jsx,ts,tsx}`
+- Updated misc rules and file globs:
+  - Enabled `eslint-plugin-json` for `*.json`
+  - Relaxed React rules for `src/pages/**/*.tsx`
+  - Relaxed export rules for `src/types/*.ts` & `src/stores/*.ts`
+  - Relaxed CommonJS rules for `.cz-config.cjs`, `jest.setup.ts`, `postcss.config.js`
+
 ## [1.1.2]
 
 ### Fixed

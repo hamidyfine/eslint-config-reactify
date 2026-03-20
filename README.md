@@ -43,6 +43,31 @@ export default [
 ];
 ```
 
+### Next.js (`eslint-config-next`)
+
+ESLint 9 flat config allows each plugin ID (for example `import`, `react`, `react-hooks`, `@typescript-eslint`) to be registered only once in the merged config. `eslint-config-next` and `eslint-config-reactify` both attach those plugins, which triggers **Cannot redefine plugin …** in the VS Code ESLint extension if you spread both configs verbatim.
+
+Spread Next’s config **first**, then map every reactify slice through a small helper that **drops only** the plugin entries Next already owns. Rules, `settings`, and other plugins (for example `@stylistic`, `perfectionist`, `json`) stay on the slice, so behavior stays the same aside from sharing Next’s plugin instances.
+
+```bash
+npm install -D eslint eslint-config-next eslint-config-reactify
+```
+
+Use the **`eslint-config-reactify/next`** entry (same usage pattern as the main export). It layers the default Next flat setup (`core-web-vitals`, `typescript`, `globalIgnores`) and then reactify with duplicate plugins stripped so ESLint 9 does not throw **Cannot redefine plugin …**.
+
+```bash
+npm install -D eslint eslint-config-next eslint-config-reactify
+```
+
+```js
+// eslint.config.mjs
+import config from 'eslint-config-reactify/next';
+
+export default config;
+```
+
+See [`examples/next/eslint.config.mjs`](examples/next/eslint.config.mjs). Add your own config objects after importing if you need overrides.
+
 ### Legacy Config
 
 ```js

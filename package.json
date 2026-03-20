@@ -8,7 +8,8 @@
     ".": {
       "import": "./lib/index.js",
       "require": "./lib/legacy.js"
-    }
+    },
+    "./next": "./lib/next.js"
   },
   "keywords": [
     "eslint",
@@ -28,14 +29,20 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "eslint": "^9.32.0"
+    "eslint": "^9.32.0",
+    "eslint-config-next": ">=15.0.0"
+  },
+  "peerDependenciesMeta": {
+    "eslint-config-next": {
+      "optional": true
+    }
   },
   "dependencies": {
     "@eslint/js": "^9.32.0",
-    "@stylistic/eslint-plugin": "^5.2.2",
+    "@stylistic/eslint-plugin": "^5.10.0",
     "@stylistic/eslint-plugin-migrate": "^4.4.1",
-    "@tanstack/eslint-plugin-query": "^5.81.2",
-    "@tanstack/eslint-plugin-router": "^1.129.7",
+    "@tanstack/eslint-plugin-query": "^5.91.5",
+    "@tanstack/eslint-plugin-router": "^1.161.6",
     "@typescript-eslint/eslint-plugin": "^8.38.0",
     "@typescript-eslint/parser": "^8.38.0",
     "eslint": "^9.32.0",
@@ -53,13 +60,14 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "eslint-plugin-simple-import-sort": "^12.1.1",
-    "eslint-plugin-sonarjs": "^3.0.4",
-    "eslint-plugin-tsdoc": "^0.4.0",
+    "eslint-plugin-sonarjs": "^4.0.2",
+    "eslint-plugin-tsdoc": "^0.5.2",
     "globals": "^16.3.0",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.38.0"
   },
   "devDependencies": {
-    "release-it": "^19.0.4"
+    "eslint-config-next": "^15.0.0",
+    "release-it": "^19.2.4"
   }
 }

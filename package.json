@@ -38,6 +38,7 @@
     }
   },
   "dependencies": {
+    "@next/eslint-plugin-next": "^16.2.2",
     "@eslint/js": "^9.32.0",
     "@stylistic/eslint-plugin": "^5.10.0",
     "@stylistic/eslint-plugin-migrate": "^4.4.1",
@@ -49,6 +50,7 @@
     "eslint-config-next": "^16.2.2",
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jsx-a11y": "^6.10.0",
     "eslint-plugin-import-newlines": "^1.4.0",
     "eslint-plugin-jest": "^29.0.1",
     "eslint-plugin-jest-dom": "^5.5.0",
